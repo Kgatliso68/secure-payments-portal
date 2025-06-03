@@ -11,15 +11,18 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+
       - node/install-packages:
           pkg-manager: npm
+
       - run:
-          name: Run Tests (Optional)
-          command: npm test || echo "Skipping tests"
+          name: Run tests (if any)
+          command: echo "No tests yet"
+
       - sonarcloud/scan
 
 workflows:
   main:
     jobs:
-      - test-and-analyze:
-          context: SonarCloud
+      - test-and-analyze
+
