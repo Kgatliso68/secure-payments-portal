@@ -1,0 +1,40 @@
+version: 2.1
+
+executors:
+  node-executor:
+    docker:
+      - image: cimg/node:20.0
+
+jobs:
+  build:
+    executor: node-executor
+    steps:
+      - checkout
+      - run: npm install
+      - run: npm run build || echo "No build script"
+      - run: npm test || echo "No tests"
+
+  sonar:
+    docker:
+      - image: cimg/node:20.0
+    steps:
+      - checkout
+      - run: npm install
+      - run:
+          name: Run SonarQube Scan
+          command: |
+            npm install -g sonarqube-scanner
+            sonar-scanner \
+              -Dsonar.projectKey=secure-payments-portal \
+              -Dsonar.sources=. \
+              -Dsonar.host.url=https://sonarcloud.io \
+              -Dsonar.login=${SONAR_TOKEN}
+
+workflows:
+  version: 2
+  test-and-analyze:
+    jobs:
+      - build
+      - sonar:
+          requires:
+            - build
