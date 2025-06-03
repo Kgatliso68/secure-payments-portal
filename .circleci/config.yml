@@ -19,9 +19,7 @@ jobs:
           name: Run tests (if any)
           command: echo "No tests yet"
 
-      - sonarcloud/scan:
-          project_key: Kgatliso68_secure-payments-portal
-          organization: kgatliso68
+      - sonarcloud/scan
 
 workflows:
   main:
