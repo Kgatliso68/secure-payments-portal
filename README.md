@@ -1,70 +1,199 @@
-# Getting Started with Create React App
+# Secure Payments Portal
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A secure full-stack web application that allows customers to register, log in, and submit international payments, while employees can manage and monitor payment activity.
 
-## Available Scripts
+This project implements secure development practices including authentication, input validation, CI/CD integration, and static code analysis.
 
-In the project directory, you can run:
+## 🚀 Features
+### 🔐 Authentication & Security
 
-### `npm start`
+Secure user registration and login
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Password hashing and salting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Role-based access (Customer / Employee)
 
-### `npm test`
+Regex-based input validation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+HTTPS enforcement
 
-### `npm run build`
+Protection against common web vulnerabilities
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 💳 Payment Management
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Submit international payments
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+View payment history (Customer)
 
-### `npm run eject`
+Employee dashboard for payment oversight
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🛡 Code Quality & DevOps
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Continuous Integration using CircleCI
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Static code analysis using SonarCloud
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Automated pipeline triggered on every push
 
-## Learn More
+Secure dependency management via npm
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🏗️ Tech Stack
+### Frontend
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+React
 
-### Code Splitting
+React Router
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Axios
 
-### Analyzing the Bundle Size
+### Backend
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Node.js
 
-### Making a Progressive Web App
+Express.js
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+REST API architecture
 
-### Advanced Configuration
+### Database
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+(Specify your database here — e.g., MongoDB / SQL / etc.)
 
-### Deployment
+### DevOps & Quality Tools
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+CircleCI
 
-### `npm run build` fails to minify
+SonarCloud
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Git & GitHub
+
+## 📂 Project Structure
+secure-payments-portal/
+│
+├── client/                  # React frontend
+├── server/                  # Backend API
+├── .circleci/
+│   └── config.yml           # CI pipeline configuration
+├── sonar-project.properties # SonarCloud configuration
+├── package.json
+├── package-lock.json
+└── README.md
+
+## ⚙️ Installation & Setup
+1️⃣ **Clone the Repository**
+git clone https://github.com/<your-username>/secure-payments-portal.git
+cd secure-payments-portal
+
+2️⃣ **Install Dependencies**
+npm install
+
+
+If using separate frontend/backend folders:
+
+cd client
+npm install
+
+cd ../server
+npm install
+
+3️⃣ **Run the Application**
+
+Backend:
+
+npm start
+
+
+Frontend:
+
+npm start
+
+
+Application will typically run on:
+
+http://localhost:3000
+
+## 🔁 Continuous Integration (CI)
+
+This project uses CircleCI.
+
+Every push to the main branch automatically:
+
+Installs dependencies
+
+Runs tests (if available)
+
+Performs static code analysis via SonarCloud
+
+Pipeline configuration is located in:
+
+.circleci/config.yml
+
+## 📊 Code Quality Analysis
+
+SonarCloud is used for:
+
+Security vulnerability detection
+
+Code smells identification
+
+Maintainability metrics
+
+Reliability analysis
+
+Configuration file:
+
+sonar-project.properties
+
+## 🧪 Testing
+
+Currently:
+
+No automated tests implemented yet.
+
+
+To add testing (recommended):
+
+npm test
+
+
+For coverage support (future improvement):
+
+npm test -- --coverage
+
+## 🔐 Security Considerations
+
+This application implements:
+
+Password hashing
+
+Input validation using Regex
+
+Secure authentication flows
+
+Static code security scanning
+
+Dependency vulnerability monitoring via npm audit
+
+To check dependency vulnerabilities:
+
+npm audit
+
+## 📈 Future Improvements
+
+Implement automated test coverage reporting
+
+Add API rate limiting
+
+Improve error handling and logging
+
+Implement Docker containerization
+
+Deploy to a cloud platform (e.g., Azure, AWS)
+
+## 👤 Author
+
+Developed by:
+Kgatliso68
+
+## 📄 License
+
+This project is for educational and academic purposes
