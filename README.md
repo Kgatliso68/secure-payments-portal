@@ -54,40 +54,14 @@ Express.js
 
 REST API architecture
 
-### Database
-
-(Specify your database here — e.g., MongoDB / SQL / etc.)
-
-### DevOps & Quality Tools
-
-CircleCI
-
-SonarCloud
-
-Git & GitHub
-
-## 📂 Project Structure
-secure-payments-portal/
-│
-├── client/                  # React frontend
-├── server/                  # Backend API
-├── .circleci/
-│   └── config.yml           # CI pipeline configuration
-├── sonar-project.properties # SonarCloud configuration
-├── package.json
-├── package-lock.json
-└── README.md
-
 ## ⚙️ Installation & Setup
 1️⃣ **Clone the Repository**
-git clone https://github.com/<your-username>/secure-payments-portal.git
+git clone https://github.com/<Kgatliso68>/secure-payments-portal.git
 cd secure-payments-portal
 
 2️⃣ **Install Dependencies**
 npm install
 
-
-If using separate frontend/backend folders:
 
 cd client
 npm install
@@ -148,16 +122,6 @@ sonar-project.properties
 Currently:
 
 No automated tests implemented yet.
-
-
-To add testing (recommended):
-
-npm test
-
-
-For coverage support (future improvement):
-
-npm test -- --coverage
 
 ## 🔐 Security Considerations
 
