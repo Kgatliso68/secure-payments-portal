@@ -93,7 +93,7 @@ Every push to the main branch automatically:
 
 Installs dependencies
 
-Runs tests (if available)
+Runs tests
 
 Performs static code analysis via SonarCloud
 
